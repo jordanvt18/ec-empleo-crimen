@@ -249,7 +249,7 @@ print("\n✓ Verificación superada: 24 provincias y total de homicidios "
 # - **Galápagos (código 20)**: presente en población y en homicidios
 #   2018–2025; ausente en 2026 (0 casos registrados en el archivo parcial).
 #
-# **Limitaciones honestas:**
+# **Limitaciones:**
 # - **ENEMDU**: solo hay microdatos 2024-II en el repositorio; el resto de
 #   trimestres del panel no tiene tasas laborales. El notebook documenta el
 #   patrón de descarga (celda 6) para ampliar la cobertura. Los tabulados

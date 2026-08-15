@@ -11,7 +11,7 @@
 # 3. **Placebo:** event study con un pseudo-tratamiento en 2021-Q1 (antes de los decretos de 2024) para descartar "efectos" espurios.
 # 4. **Contraste externo OECO:** boletín S1-2025 (4 619 homicidios, +47 % vs S1-2024) vs dataset oficial (4 659).
 # 5. **Conclusiones:** qué se puede afirmar y qué no.
-# 6. **Limitaciones honestas y próximos pasos.**
+# 6. **Limitaciones y próximos pasos.**
 #
 # > ⚠️ Este análisis es **correlacional/descriptivo con controles de panel**, no un ejercicio de causalidad ingenua.
 
@@ -324,7 +324,7 @@ if s1_2025 is not None:
 # - Generalizar a nivel cantonal: el análisis es provincial.
 
 # %%
-# --- 6) LIMITACIONES HONESTAS Y PRÓXIMOS PASOS -----------------------------
+# --- 6) LIMITACIONES Y PRÓXIMOS PASOS -----------------------------
 # **Limitaciones:**
 # - Cobertura ENEMDU parcial: solo 2024-II con microdatos provinciales en el repo inicial;
 #   los demás periodos (2018–2023, 2025–2026) requieren descarga (patrones documentados en el

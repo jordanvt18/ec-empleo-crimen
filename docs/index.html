@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ec-empleo-crimen · Desempleo, subempleo y homicidios en Ecuador (2018–2026)</title>
+<meta name="description" content="Análisis CRISP-DM de la relación entre desempleo/subempleo y homicidios intencionales en Ecuador a nivel provincial (2018–2026), con fuentes oficiales exclusivamente.">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #1c2430; --muted: #5b6572;
+    --accent: #0b5e42; --accent2: #0d7a58; --border: #e3e7ec;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+  header { background: linear-gradient(135deg, #0b3d2e, #0d7a58); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  header h1 { font-size: 1.9rem; letter-spacing: .2px; }
+  header p { margin-top: .6rem; max-width: 760px; margin-inline: auto; opacity: .92; }
+  main { max-width: 980px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem 1.3rem; }
+  .card h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: .5rem; }
+  .card p, .card li { color: var(--muted); font-size: .93rem; }
+  .card ul { padding-left: 1.1rem; }
+  .card img { width: 100%; border-radius: 8px; border: 1px solid var(--border); margin-top: .5rem; }
+  .caption { font-size: .8rem; color: var(--muted); margin-top: .35rem; }
+  a { color: var(--accent2); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  h2 { margin-top: 2.4rem; font-size: 1.3rem; color: var(--ink); border-bottom: 2px solid var(--border); padding-bottom: .4rem; }
+  .badges { margin-top: 1.2rem; display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); padding: .25rem .8rem; border-radius: 999px; font-size: .82rem; }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 1.5rem; border-top: 1px solid var(--border); background: var(--card); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🦞 ec-empleo-crimen</h1>
+  <p>Análisis CRISP-DM de la relación entre <strong>desempleo/subempleo</strong> y <strong>homicidios intencionales</strong> en Ecuador a nivel provincial (2018–2026), con fuentes oficiales exclusivamente (INEC, Ministerio del Interior, IGM/CONALI).</p>
+  <div class="badges">
+    <span class="badge">CRISP-DM</span>
+    <span class="badge">24 provincias · DPA 2 dígitos</span>
+    <span class="badge">Panel 2018Q1–2026Q2</span>
+    <span class="badge">Efectos fijos · Event study · Control sintético</span>
+  </div>
+</header>
+<main>
+
+  <h2>📌 Pregunta de investigación</h2>
+  <p>¿Cómo evolucionó la criminalidad letal (homicidios por 100 000 habitantes) en las provincias de Ecuador entre 2018 y 2026, y qué asociación (no causal) guarda con el deterioro del mercado laboral (desempleo y subempleo por provincia), controlando por heterogeneidad geográfica y temporal?</p>
+
+  <h2>📊 Hallazgos principales</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Explosión de homicidios con récord en 2025</h3>
+      <p>La serie nacional pasó de 996 víctimas (2018) a 9 283 (2025); el primer semestre de 2026 suma 4 154. Guayas concentra el 44,2 % del periodo 2018–2025.</p>
+      <img src="figures/fig_homicidios_nacional.png" alt="Serie mensual de homicidios intencionales 2018–2026">
+      <div class="caption">Serie mensual nacional 2018–2026 con decretos de conflicto armado interno (111 y 55).</div>
+    </div>
+    <div class="card">
+      <h3>2. La ola es nacional, no solo Guayas</h3>
+      <p>Sin Guayas, el crecimiento interanual se mantiene (2025 vs 2024: +34,7 %). El deterioro se extendió a la Costa y la frontera norte.</p>
+      <img src="figures/fig_04_mapa_homicidios_2025.png" alt="Mapa coroplético de tasas de homicidio por provincia 2025">
+      <div class="caption">Tasa de homicidios por 100 000 habitantes, 2025 (mapa coroplético CONALI/IGM).</div>
+    </div>
+    <div class="card">
+      <h3>3. La escalada precedió a los decretos de 2024</h3>
+      <p>El event study del Decreto 111 (ene-2024) no muestra efectos diferenciales significativos; el placebo (2021-Q1) es plano en t≈0 y su repunte tardío coincide con 2023-Q1, inicio real de la ola.</p>
+      <img src="figures/fig_04_event_study_decreto111.png" alt="Event study alrededor del Decreto 111">
+      <div class="caption">Coeficientes β por trimestre relativo al Decreto 111 con intervalos de confianza al 95 %.</div>
+    </div>
+    <div class="card">
+      <h3>4. Sin efectos espurios: placebo plano</h3>
+      <p>El pseudo-tratamiento en 2021-Q1 no responde en t≈0, lo que refuerza que el diseño no fabrica "efectos" donde no los hay.</p>
+      <img src="figures/fig_placebo_event_study.png" alt="Placebo del event study en 2021-Q1">
+      <div class="caption">Placebo con pseudo-tratamiento en 2021-Q1 (antes de los decretos).</div>
+    </div>
+  </div>
+
+  <h2>🧪 Modelos y resultados honestos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Correlación laboral (ENEMDU 2024-II, N=24)</h3>
+      <ul>
+        <li>Subempleo ↔ homicidios 2025: r = 0,34 (Pearson), ρ = 0,42 (Spearman).</li>
+        <li>Desempleo ↔ homicidios: r ≤ 0,18 — asociación débil.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Efectos fijos (un corte ENEMDU → dummies de región)</h3>
+      <ul>
+        <li>Desempleo: β ≈ +0,08 (p ≈ 0,39), no significativo.</li>
+        <li>Subempleo: β ≈ −0,04 (p ≈ 0,47), no significativo.</li>
+        <li>Con un solo trimestre ENEMDU los FE provincia+periodo no son identificables: se estima el objeto honesto y se documenta.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Control sintético: Esmeraldas</h3>
+      <ul>
+        <li>RMSE pre-tratamiento = 4,78 por 100 000.</li>
+        <li>Brecha media post-Decreto 111 = −4,87 (Esmeraldas por debajo de su sintética).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Contraste externo (OECO, PADF)</h3>
+      <ul>
+        <li>Boletín S1-2025: 4 619 homicidios vs dataset oficial 4 659 → Δ ≈ +0,9 %.</li>
+        <li>Discrepancia atribuible a cortes de fecha; citado sin copia literal.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>📁 Estructura del repositorio</h2>
+  <div class="card" style="font-family: Consolas, monospace; font-size: .88rem;">
+    <pre>├── notebooks/        05 notebooks CRISP-DM (01 comprensión → 05 evaluación)
+├── notebook_sources/  versiones .py estilo jupytext (regeneran los .ipynb)
+├── src/               config, loaders, data_prep, geoprocessing, panel_helpers
+├── data/raw/          fuentes oficiales (INEC, Ministerio del Interior, IGM/CONALI)
+├── data/processed/    panel provincia-trimestre y tasas
+├── reports/figures/   gráficos generados por los notebooks
+├── app.py             app Streamlit interactiva
+└── requirements.txt</pre>
+  </div>
+
+  <h2>🔗 Enlaces</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Repositorio y código</h3>
+      <ul>
+        <li><a href="https://github.com/jordanvt18/ec-empleo-crimen">GitHub: jordanvt18/ec-empleo-crimen</a></li>
+        <li><a href="https://github.com/jordanvt18/ec-empleo-crimen/blob/main/README.md">README completo</a> (fuentes con fechas, metodología, limitaciones)</li>
+        <li><a href="https://github.com/jordanvt18/ec-empleo-crimen/tree/main/notebooks">Notebooks ejecutados</a></li>
+        <li><a href="https://github.com/jordanvt18/ec-empleo-crimen/blob/main/app.py">App Streamlit</a> (ejecutar con <code>streamlit run app.py</code>)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fuentes oficiales</h3>
+      <ul>
+        <li><a href="https://datosabiertos.gob.ec/dataset/homicidios-intencionales">Homicidios intencionales — datos abiertos</a></li>
+        <li><a href="https://www.ecuadorencifras.gob.ec/estadisticas-laborales-enemdu/">ENEMDU — INEC</a></li>
+        <li><a href="https://www.ecuadorencifras.gob.ec/proyecciones-poblacionales/">Proyecciones poblacionales — INEC</a></li>
+        <li><a href="https://www.geoportaligm.gob.ec/portal/index.php/descargas/cartografia-de-libre-acceso/registro/">Cartografía IGM/CONALI</a></li>
+        <li><a href="https://oeco.padf.org/">OECO (contraste externo)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>⚠️ Limitaciones</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Cobertura ENEMDU parcial:</strong> microdatos provinciales de un trimestre (2024-II); el resto del periodo requiere descarga (patrones documentados en el notebook 03).</li>
+      <li><strong>No es causalidad:</strong> los efectos fijos no eliminan variables omitidas (inversión en seguridad, grupos armados, migración, informalidad).</li>
+      <li><strong>Datos administrativos:</strong> los homicidios están sujetos a variaciones según el metadato oficial; Galápagos no reporta homicidios en 2026.</li>
+      <li><strong>Denominador proyectado:</strong> tasas por 100 000 con proyecciones INEC (revisión 2024, base Censo 2022), no conteos censales puntuales.</li>
+    </ul>
+  </div>
+
+</main>
+<footer>
+  Proyecto de ciencia de datos con fuentes oficiales del Estado ecuatoriano · Datos: INEC, Ministerio del Interior, IGM/CONALI · Código: uso libre con atribución.
+</footer>
+</body>
+</html>

@@ -52,7 +52,7 @@ ec-empleo-crimen/
 
 3. **No hay "efecto" espurio en el placebo, y la ola precedió a los decretos de 2024.** El event study con un pseudo-tratamiento en 2021-Q1 no muestra respuesta inmediata (placebo plano en t≈0), mientras que el repunte tardío de la ventana placebo coincide con 2023-Q1, el inicio real de la escalada. El event study centrado en 2024-Q1 (decreto 111) confirma que la ola ya estaba en curso antes de los decretos: estos formalizaron la respuesta estatal (figura `reports/figures/fig_placebo_event_study.png`). El contraste externo con el boletín OECO S1-2025 (4 619 homicidios) coincide con el dataset oficial (4 659; Δ≈0,9 %, atribuible a cortes de fecha).
 
-## Limitaciones honestas
+## Limitaciones
 
 - **Cobertura ENEMDU parcial:** el repositorio inicial incluye microdatos provinciales de un solo trimestre (2024-II); el resto del periodo 2018–2026 requiere descarga (patrones documentados en el notebook 03) o acceso a ANDA. Por eso el panel laboral no permite estimar elasticidades de largo plazo.
 - **No es un ejercicio de causalidad:** los efectos fijos no eliminan variables omitidas (inversión en seguridad, presencia de grupos armados, migración, informalidad, demanda de drogas).

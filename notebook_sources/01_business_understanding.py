@@ -103,7 +103,7 @@
 # | 2. Comprensión de los datos | Carga, perfilado y calidad de las 4 fuentes; figura exploratoria | 02 |
 # | 3. Preparación de datos | Normalización DPA, agregación provincia-periodo, panel con tasas por 100 000 | 03 |
 # | 4. Modelado | Series + mapas, efectos fijos (statsmodels/linearmodels), event study y control sintético con los decretos 111/218/55/424 | 04 |
-# | 5. Evaluación | Robustez sin Guayas, contraste con OECO, limitaciones honestas | 05 |
+# | 5. Evaluación | Robustez sin Guayas, contraste con OECO, limitaciones | 05 |
 #
 # **Criterio de éxito:** entregar un panel provincia-periodo reproducible y un análisis que responda a la pregunta con controles de heterogeneidad, documentando explícitamente qué NO se puede concluir.
 

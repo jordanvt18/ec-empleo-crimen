@@ -109,28 +109,146 @@
   </div>
 
   <h2>📚 Evidencia empírica y política pública</h2>
-  <p>El proyecto incluye un anexo con <strong>revisión de literatura académica indexada</strong> (Springer, Elsevier, JSTOR, Oxford, Cambridge, NBER/IZA, BID), <strong>metodologías robustas de inferencia causal y evaluación de impacto</strong>, y <strong>recomendaciones accionables para altos funcionarios de gobierno</strong>. Las ~110 referencias del anexo tienen DOI verificado contra Crossref (muestra independiente de 62/62).</p>
+  <p>Sección basada en el anexo del proyecto (~110 referencias académicas indexadas: Springer, Elsevier, JSTOR, Oxford, Cambridge, NBER/IZA, BID), con todos los DOIs verificados contra Crossref (revisión independiente: 62/62).</p>
+
+  <h3 style="margin-top:1.5rem;">💡 Insights de la literatura</h3>
   <div class="grid">
     <div class="card">
-      <h3>Qué dice la literatura</h3>
+      <h3>Desempleo ↔ crimen: fuerte para robos, débil para homicidios</h3>
+      <p>La asociación desempleo-delincuencia es robusta para delitos patrimoniales (Chiricos, 1987; Raphael &amp; Winter-Ebmer, 2001; Gould et al., 2002) pero frágil o nula para homicidios en paneles internacionales (Fajnzylber et al., 2002). Coherente con este proyecto: Pearson r = 0,34 y efectos fijos laborales no significativos.</p>
+    </div>
+    <div class="card">
+      <h3>Los picos de homicidios en la región no son laborales</h3>
+      <p>México, Colombia y Centroamérica muestran que la letalidad se explica por mercados ilegales, fragmentación de grupos y capacidad estatal (Dell, 2015; Castillo et al., 2020; Lessing, 2015, 2021; Osorio, 2015), no por el desempleo agregado. Ecuador 2021–2025 encaja en ese patrón.</p>
+    </div>
+    <div class="card">
+      <h3>El canal laboral opera por costo de oportunidad</h3>
+      <p>Shocks que reducen el ingreso lícito aumentan el conflicto y el reclutamiento (Dube &amp; Vargas, 2013); la exposición infantil a mercados laborales ilegales forma carreras criminales de largo plazo (Sviatschi, 2022a). Relevante para prevención juvenil, no para el nivel agregado de homicidios.</p>
+    </div>
+    <div class="card">
+      <h3>Las pandillas destruyen el empleo local</h3>
+      <p>En territorios con gobernanza criminal, los residentes ganan ~USD 350 menos al mes y los trabajadores más calificados migran (Melnikov et al., 2025; Cruz, 2010): el mercado laboral lícito colapsa justo donde más se necesita.</p>
+    </div>
+    <div class="card">
+      <h3>La «mano dura» generalizada es contraproducente</h3>
+      <p>En El Salvador (2003–2022), las fases represivas tuvieron ≈54 % más homicidios mensuales que las treguas (~17 767 homicidios atribuibles) (Escaño et al., 2025; Wolf, 2012; Jütersonke et al., 2009).</p>
+    </div>
+    <div class="card">
+      <h3>La ola ecuatoriana precede a los decretos</h3>
+      <p>El event study del Decreto 111 (ene-2024) no muestra efectos diferenciales significativos y el placebo 2021-Q1 es plano en t≈0: la escalada 2021–2025 es anterior a la respuesta estatal formal (hallazgo de este proyecto).</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem;">📊 Gráficos de evidencia</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Subempleo y homicidios por provincia (N = 24)</h3>
+      <img src="figures/fig_evidencia_subempleo_homicidios.png" alt="Dispersión subempleo 2024-II vs tasa de homicidios 2025 por provincia">
+      <div class="caption">Datos reales del panel del proyecto: Pearson r = 0,34 · Spearman ρ = 0,42 — asociación débil.</div>
+    </div>
+    <div class="card">
+      <h3>Evidencia de impacto de intervenciones sobre crimen</h3>
+      <img src="figures/fig_evidencia_intervenciones.png" alt="Síntesis de evidencia de evaluaciones de impacto sobre crimen">
+      <div class="caption">Síntesis cualitativa de la literatura indexada (no es un meta-análisis).</div>
+    </div>
+    <div class="card">
+      <h3>Serie nacional de homicidios 2018–2026</h3>
+      <img src="figures/fig_homicidios_nacional.png" alt="Serie mensual de homicidios intencionales">
+      <div class="caption">996 (2018) → 9 283 (2025); 4 154 en el S1-2026; decretos 111 y 55 marcados.</div>
+    </div>
+    <div class="card">
+      <h3>Mapa de tasas por provincia, 2025</h3>
+      <img src="figures/fig_04_mapa_homicidios_2025.png" alt="Mapa coroplético de tasas de homicidio 2025">
+      <div class="caption">Tasa por 100 000 hab. (CONALI/IGM, EPSG:4326), recorte al percentil 95.</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:1.5rem;">🧮 Métodos robustos de inferencia causal (aplicados al caso Ecuador)</h3>
+  <div class="card">
+    <ul>
+      <li><strong>DiD moderno con tratamiento escalonado</strong> (Callaway &amp; Sant'Anna, 2021; Goodman-Bacon, 2021; de Chaisemartin &amp; D'Haultfœuille, 2020): estimaría el efecto de los decretos por provincia, robusto a efectos heterogéneos; los decretos 55 (2025) y 424 (2026) aportan variación temporal adicional.</li>
+      <li><strong>Control sintético</strong> (Abadie &amp; Gardeazabal, 2003; Abadie et al., 2010, 2015): ya aplicado a Esmeraldas en este proyecto (brecha media post-decreto −4,87 por 100 000); extensible a Guayas, Manabí y Los Ríos con distribución de placebo.</li>
+      <li><strong>Event study con pre-trends y wild bootstrap</strong> (Roth, 2022; MacKinnon &amp; Webb, 2017): inferencia válida con solo 24 clústeres provinciales.</li>
+      <li><strong>RDD e IV</strong> (Imbens &amp; Lemieux, 2008; Angrist &amp; Pischke, 2009): para evaluar programas puntuales con umbrales de asignación o shocks exógenos.</li>
+      <li><strong>ML causal</strong> (Chernozhukov et al., 2018 — Double/Debiased ML; Wager &amp; Athey, 2018 — causal forests): heterogeneidad del efecto por provincia con controles de alta dimensión.</li>
+      <li><strong>Requisito de datos:</strong> panel laboral provincial trimestral 2018–2026 (microdatos ENEMDU/ANDA) para identificar efectos fijos laborales; hoy el repositorio cubre 2024-II (limitación declarada).</li>
+    </ul>
+  </div>
+
+  <h3 style="margin-top:1.5rem;">🏛️ Recomendaciones para altos funcionarios de gobierno</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>1 · Datos y medición <span style="color:#0d7a58;">[Evidencia alta]</span></h3>
       <ul>
-        <li>Desempleo↔homicidios: asociación débil y heterogénea (robusta para robos, frágil para homicidios).</li>
-        <li>Los picos de homicidios en la región se explican por mercados ilegales, fragmentación de grupos y capacidad estatal.</li>
-        <li>Coherente con nuestros resultados: r ≤ 0,34 y efectos fijos laborales no significativos.</li>
+        <li>Publicar microdatos ENEMDU provinciales trimestrales (el tabulado oficial no desagrega por provincia).</li>
+        <li>Crear una unidad de evidencia y analítica en seguridad con acceso a registros administrativos.</li>
+        <li>Estandarizar el registro de homicidios (fecha, lugar, tipo) y publicarlo con rezago corto.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Qué recomienda a los tomadores de decisión</h3>
+      <h3>2 · Seguridad <span style="color:#0d7a58;">[Evidencia alta/media]</span></h3>
       <ul>
-        <li>Policía focalizada en puntos calientes; evitar «mano dura» generalizada (evidencia adversa en El Salvador).</li>
-        <li>Evaluar el Bono de Desarrollo Humano y los programas de empleo juvenil con estándares causales.</li>
-        <li>Crear una unidad de evidencia y evaluación de impacto en seguridad.</li>
+        <li>Policía focalizada en puntos calientes de letalidad (efectos modestos pero robustos; patrullaje no focalizado no funciona — Bogotá).</li>
+        <li>Evitar «mano dura» generalizada (evidencia adversa en El Salvador).</li>
+        <li>Monitorear el desplazamiento del crimen hacia provincias vecinas (Osorio, 2015; Blattman et al., 2021).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>3 · Laboral y prevención <span style="color:#5b6572;">[Evidencia media]</span></h3>
+      <ul>
+        <li>Evaluar el Bono de Desarrollo Humano con estándares causales (Bolsa Família redujo crimen urbano en Brasil — Chioda et al., 2016).</li>
+        <li>Programas de empleo juvenil focalizados en cantones de alta letalidad, con evaluación desde el diseño (efectos laborales reales; homicidios aún no medidos en la literatura).</li>
+        <li>Prevención de reclutamiento escolarizada en territorios con gobernanza criminal (Sviatschi, 2022a/b; Melnikov et al., 2025).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>4 · Institucionalidad <span style="color:#0d7a58;">[Evidencia alta]</span></h3>
+      <ul>
+        <li>Evaluación de impacto obligatoria de las intervenciones del estado de excepción.</li>
+        <li>Gestión por resultados interinstitucional (modelo Pacto por la Vida, Pernambuco — Ratton et al., 2014; evidencia descriptiva).</li>
+        <li>Agenda de investigación con universidades y acceso a datos anonimizados.</li>
       </ul>
     </div>
   </div>
-  <p style="margin-top: .8rem;"><a href="evidencia_empirica_y_politica_publica.md">📄 Leer el reporte completo aquí (3 capítulos, ~110 referencias verificadas)</a> · <a href="https://github.com/jordanvt18/ec-empleo-crimen/blob/main/reports/evidencia_empirica_y_politica_publica.md">ver en GitHub</a></p>
 
-  <h2>📁 Estructura del repositorio</h2>
+  <h3 style="margin-top:1.5rem;">📖 Referencias clave (todas indexadas, DOI verificado)</h3>
+  <div class="card" style="font-size:.84rem; max-height:300px; overflow-y:auto;">
+    <ol style="padding-left:1.2rem;">
+      <li>Becker, G. S. (1968). Crime and Punishment: An Economic Approach. <em>Journal of Political Economy</em>. <a href="https://doi.org/10.1086/259394">10.1086/259394</a></li>
+      <li>Ehrlich, I. (1973). Participation in Illegitimate Activities. <em>Journal of Political Economy</em>. <a href="https://doi.org/10.1086/260058">10.1086/260058</a></li>
+      <li>Chiricos, T. (1987). Rates of Crime and Unemployment. <em>Social Problems</em>. <a href="https://doi.org/10.1525/sp.1987.34.2.03a00060">10.1525/sp.1987.34.2.03a00060</a></li>
+      <li>Raphael, S. &amp; Winter-Ebmer, R. (2001). Identifying the Effect of Unemployment on Crime. <em>The Journal of Law and Economics</em>. <a href="https://doi.org/10.1086/320275">10.1086/320275</a></li>
+      <li>Fajnzylber, P., Lederman, D. &amp; Loayza, N. (2002). What causes violent crime? <em>European Economic Review</em>. <a href="https://doi.org/10.1016/s0014-2921(01)00096-4">10.1016/s0014-2921(01)00096-4</a></li>
+      <li>Edmark, K. (2005). Unemployment and Crime: Is There a Connection? <em>Scandinavian Journal of Economics</em>. <a href="https://doi.org/10.1111/j.1467-9442.2005.00412.x">10.1111/j.1467-9442.2005.00412.x</a></li>
+      <li>Dell, M. (2015). Trafficking Networks and the Mexican Drug War. <em>American Economic Review</em>. <a href="https://doi.org/10.1257/aer.20121637">10.1257/aer.20121637</a></li>
+      <li>Dube, O. &amp; Vargas, J. F. (2013). Commodity Price Shocks and Civil Conflict: Evidence from Colombia. <em>Review of Economic Studies</em>. <a href="https://doi.org/10.1093/restud/rdt009">10.1093/restud/rdt009</a></li>
+      <li>Osorio, J. (2015). The Contagion of Drug Violence. <em>Journal of Conflict Resolution</em>. <a href="https://doi.org/10.1177/0022002715587048">10.1177/0022002715587048</a></li>
+      <li>Lessing, B. (2015). Logics of Violence in Criminal War. <em>Journal of Conflict Resolution</em>. <a href="https://doi.org/10.1177/0022002715587100">10.1177/0022002715587100</a></li>
+      <li>Lessing, B. (2021). Conceptualizing Criminal Governance. <em>Perspectives on Politics</em>. <a href="https://doi.org/10.1017/s1537592720001243">10.1017/s1537592720001243</a></li>
+      <li>Cruz, J. M. (2010). Central American maras. <em>Global Crime</em>. <a href="https://doi.org/10.1080/17440572.2010.519518">10.1080/17440572.2010.519518</a></li>
+      <li>Britto, D., Pinotti, P. &amp; Sampaio, B. (2022). Job Loss, Unemployment Insurance and Crime in Brazil. <em>Econometrica</em>. <a href="https://doi.org/10.3982/ecta18984">10.3982/ecta18984</a></li>
+      <li>Melnikov, N., Schmidt-Padilla, C. &amp; Sviatschi, M. M. (2025). Gangs, Labor Mobility, and Development. <em>Econometrica</em>. <a href="https://doi.org/10.3982/ecta21305">10.3982/ecta21305</a></li>
+      <li>Sviatschi, M. M. (2022a). Making a NARCO. <em>Econometrica</em>. <a href="https://doi.org/10.3982/ecta17082">10.3982/ecta17082</a></li>
+      <li>Sviatschi, M. M. (2022b). Spreading Gangs: Exporting US Criminal Capital to El Salvador. <em>American Economic Review</em>. <a href="https://doi.org/10.1257/aer.20201540">10.1257/aer.20201540</a></li>
+      <li>Wolf, S. (2012). Mara Salvatrucha. <em>Latin American Politics and Society</em>. <a href="https://doi.org/10.1111/j.1548-2456.2012.00143.x">10.1111/j.1548-2456.2012.00143.x</a></li>
+      <li>Jütersonke, O., Muggah, R. &amp; Rodgers, D. (2009). Gangs, Urban Violence, and Security Interventions in Central America. <em>Security Dialogue</em>. <a href="https://doi.org/10.1177/0967010609343298">10.1177/0967010609343298</a></li>
+      <li>Blattman, C., Green, D., Ortega, D. &amp; Tobón, S. (2021). Place-Based Interventions at Scale. <em>JEEA</em>. <a href="https://doi.org/10.1093/jeea/jvab002">10.1093/jeea/jvab002</a></li>
+      <li>Blattman, C. &amp; Annan, J. (2016). Can Employment Reduce Lawlessness and Rebellion? <em>APSR</em>. <a href="https://doi.org/10.1017/S0003055415000520">10.1017/S0003055415000520</a></li>
+      <li>Callaway, B. &amp; Sant'Anna, P. H. C. (2021). Difference-in-Differences with multiple time periods. <em>Journal of Econometrics</em>. <a href="https://doi.org/10.1016/j.jeconom.2020.12.001">10.1016/j.jeconom.2020.12.001</a></li>
+      <li>Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. <em>Journal of Econometrics</em>. <a href="https://doi.org/10.1016/j.jeconom.2021.03.014">10.1016/j.jeconom.2021.03.014</a></li>
+      <li>Imbens, G. &amp; Lemieux, T. (2008). Regression discontinuity designs: A guide to practice. <em>Journal of Econometrics</em>. <a href="https://doi.org/10.1016/j.jeconom.2007.05.001">10.1016/j.jeconom.2007.05.001</a></li>
+      <li>Roth, J. (2022). Pretest with Caution. <em>AER: Insights</em>. <a href="https://doi.org/10.1257/aeri.20210236">10.1257/aeri.20210236</a></li>
+      <li>MacKinnon, J. &amp; Webb, M. (2017). Wild Bootstrap Inference. <em>Journal of Applied Econometrics</em>. <a href="https://doi.org/10.1002/jae.2508">10.1002/jae.2508</a></li>
+      <li>Abadie, A. &amp; Gardeazabal, J. (2003). The Economic Costs of Conflict: The Basque Country. <em>AER</em>. <a href="https://doi.org/10.1257/000282803321455188">10.1257/000282803321455188</a></li>
+      <li>Ratton, J. L., Galvão, C. &amp; Fernandez, M. (2014). Pact for Life and the Reduction of Homicides in Pernambuco. <em>Stability</em>. <a href="https://doi.org/10.5334/sta.dq">10.5334/sta.dq</a></li>
+      <li>Chioda, L. (2017). <em>Stop the Violence in Latin America</em>. Banco Mundial. <a href="https://doi.org/10.1596/978-1-4648-0664-3">10.1596/978-1-4648-0664-3</a></li>
+      <li>Jaitman, L. (ed.) (2017). <em>The Costs of Crime and Violence in LAC</em>. BID. <a href="https://doi.org/10.18235/0000615">10.18235/0000615</a></li>
+      <li>FMI (2024). <em>Crime and Its Macroeconomic Impact in Ecuador</em>. IMF WP 2024/358. <a href="https://doi.org/10.5089/9798400297724.002.a003">10.5089/9798400297724.002.a003</a></li>
+    </ol>
+  </div>
+  <p style="margin-top:.8rem;">📄 <a href="evidencia_empirica_y_politica_publica.md">Versión completa del anexo (3 capítulos, ~110 referencias, con nota metodológica de verificación)</a> · <a href="https://github.com/jordanvt18/ec-empleo-crimen/blob/main/reports/evidencia_empirica_y_politica_publica.md">ver en GitHub</a></p>
+
+<h2>📁 Estructura del repositorio</h2>
   <div class="card" style="font-family: Consolas, monospace; font-size: .88rem;">
     <pre>├── notebooks/        05 notebooks CRISP-DM (01 comprensión → 05 evaluación)
 ├── notebook_sources/  versiones .py estilo jupytext (regeneran los .ipynb)

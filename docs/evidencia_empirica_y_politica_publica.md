@@ -205,7 +205,7 @@ Cuatro extensiones de datos cambiarían el menú metodológico. Primero, un pane
 - Imbens, G. W., & Lemieux, T. (2008). Regression discontinuity designs: A guide to practice. *Journal of Econometrics*, 142(2), 615–635. https://doi.org/10.1016/j.jeconom.2007.05.001
 - Klick, J., & Tabarrok, A. (2005). Using Terror Alert Levels to Estimate the Effect of Police on Crime. *The Journal of Law and Economics*, 48(1), 267–279. https://doi.org/10.1086/426877
 - MacKinnon, J. G., & Webb, M. D. (2017). Wild Bootstrap Inference for Wildly Different Cluster Sizes. *Journal of Applied Econometrics*, 32(2), 233–254. https://doi.org/10.1002/jae.2508
-- Osorio, J. (2015). The Contagion of Drug Violence: Spatiotemporal Dynamics and the Effectiveness of Anti-Drug Policy.\1\2*, 59(8), 1403–1432. https://doi.org/10.1177/0022002715587048
+- Osorio, J. (2015). The Contagion of Drug Violence: Spatiotemporal Dynamics and the Effectiveness of Anti-Drug Policy. *Journal of Conflict Resolution*, 59(8), 1403–1432. https://doi.org/10.1177/0022002715587048
 - Ratton, J. L., Galvão, C., & Fernandez, M. (2014). Pact for Life and the Reduction of Homicides in the State of Pernambuco. *Stability: International Journal of Security & Development*, 3(1). https://doi.org/10.5334/sta.dq
 - Roth, J. (2022). Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends. *American Economic Review: Insights*, 4(3), 305–322. https://doi.org/10.1257/aeri.20210236
 - Sherman, L. W., & Weisburd, D. (1995). General deterrent effects of police patrol in crime "hot spots": A randomized, controlled trial. *Justice Quarterly*, 12(4), 625–648. https://doi.org/10.1080/07418829500096221

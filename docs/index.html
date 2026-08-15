@@ -75,40 +75,49 @@
     </div>
   </div>
 
-  <h2>🧪 Modelos y resultados honestos</h2>
+  <h2>🧪 Modelos econométricos y resultados</h2>
+  <p>Esta sección resume las especificaciones econométricas del proyecto y sus estimaciones puntuales. La interpretación se ciñe a la variación identificada por cada diseño: el marco es observacional, con control de heterogeneidad geográfica y temporal, y no permite atribución causal; así se declara en cada estimador.</p>
   <div class="grid">
     <div class="card">
-      <h3>Correlación laboral (ENEMDU 2024-II, N=24)</h3>
+      <h3>Asociación transversal (ENEMDU 2024-II vs letalidad 2025, N = 24)</h3>
       <ul>
-        <li>Subempleo ↔ homicidios 2025: r = 0,34 (Pearson), ρ = 0,42 (Spearman).</li>
-        <li>Desempleo ↔ homicidios: r ≤ 0,18 — asociación débil.</li>
+        <li>Correlación de Pearson entre tasa de subempleo y tasa de homicidios 2025: r = 0,34; coeficiente de Spearman: ρ = 0,42.</li>
+        <li>Desempleo abierto: |r| ≤ 0,18. Estadísticos descriptivos de corte transversal: no controlan por confusores observados ni no observados.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Efectos fijos (un corte ENEMDU → dummies de región)</h3>
+      <h3>Efectos fijos y límites de identificación</h3>
       <ul>
-        <li>Desempleo: β ≈ +0,08 (p ≈ 0,39), no significativo.</li>
-        <li>Subempleo: β ≈ −0,04 (p ≈ 0,47), no significativo.</li>
-        <li>Con un solo trimestre ENEMDU los FE provincia+periodo no son identificables: se estima el objeto honesto y se documenta.</li>
+        <li>Con un único corte de ENEMDU (2024-II), los efectos fijos de provincia y periodo absorben por construcción la variación laboral: los coeficientes laborales no son identificables y se estima una especificación de mínimos cuadrados con efectos regionales y errores estándar agrupados por provincia.</li>
+        <li>Desempleo: β ≈ +0,08 (p ≈ 0,39); subempleo: β ≈ −0,04 (p ≈ 0,47). Ningún coeficiente es estadísticamente distinguible de cero al 5 %.</li>
+        <li>La identificación del canal laboral exige un panel provincial trimestral (2018–2026); su ausencia se documenta como limitación del diseño.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Estudio de eventos en torno al Decreto 111</h3>
+      <ul>
+        <li>Dummies de trimestre relativo interactuadas con el grupo tratado (tercil superior del índice de debilidad laboral 2024-II), efectos fijos de provincia y periodo, errores agrupados por provincia.</li>
+        <li>Ningún β<sub>k</sub> posterior a 2024-Q1 es estadísticamente significativo: no se detecta respuesta diferencial atribuible al decreto dentro de la muestra.</li>
+        <li>Placebo con pseudo-tratamiento en 2021-Q1: coeficientes planos en t ≈ 0; el repunte tardío coincide con 2023-Q1, inicio de la escalada real y anterior a la política.</li>
       </ul>
     </div>
     <div class="card">
       <h3>Control sintético: Esmeraldas</h3>
       <ul>
-        <li>RMSE pre-tratamiento = 4,78 por 100 000.</li>
-        <li>Brecha media post-Decreto 111 = −4,87 (Esmeraldas por debajo de su sintética).</li>
+        <li>Pesos estimados por minimización del error cuadrático medio pre-tratamiento (método de control sintético; Abadie, Diamond &amp; Hainmueller, 2010): ajuste RMSE = 4,78 homicidios/100 000.</li>
+        <li>Brecha media posterior al Decreto 111: −4,87/100 000; la provincia observada se mantiene por debajo de su contrafactual sintético. Resultado descriptivo: sin distribución de placebo no constituye inferencia formal.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Contraste externo (OECO, PADF)</h3>
+      <h3>Validez externa: contraste con OECO</h3>
       <ul>
-        <li>Boletín S1-2025: 4 619 homicidios vs dataset oficial 4 659 → Δ ≈ +0,9 %.</li>
-        <li>Discrepancia atribuible a cortes de fecha; citado sin copia literal.</li>
+        <li>Boletín semestral S1-2025 (OECO/PADF): 4 619 homicidios; agregación del registro oficial en este proyecto: 4 659 (Δ ≈ +0,9 %), atribuible a cortes de fecha y depuración de duplicados.</li>
+        <li>El contraste se cita de forma parafraseada, sin reproducción literal del texto fuente.</li>
       </ul>
     </div>
   </div>
 
-  <h2>📚 Evidencia empírica y política pública</h2>
+<h2>📚 Evidencia empírica y política pública</h2>
   <p>Sección basada en el anexo del proyecto (~110 referencias académicas indexadas: Springer, Elsevier, JSTOR, Oxford, Cambridge, NBER/IZA, BID), con todos los DOIs verificados contra Crossref (revisión independiente: 62/62).</p>
 
   <h3 style="margin-top:1.5rem;">💡 Insights de la literatura</h3>

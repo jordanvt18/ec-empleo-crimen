@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Datos procesados: se versionan (pequeños, regenerables) para que el repo
+# sea usable sin ejecutar todos los notebooks; solo se excluyen temporales.
+data/processed/*.parquet
+data/processed/*.tmp
+
+# Figuras: se versionan (el README y la app las usan); se excluyen temporales.
+reports/figures/*.tmp
+
+# Geodatos pesados: se commitea el ZIP (18 MB); lo extraído NO se commitea
+data/raw/geografia/conali_ot_provincial_2025_shp/
+data/raw/geografia/*.gdb/
+data/raw/geografia/*.gpkg
+data/raw/geografia/*.shp
+data/raw/geografia/*.shx
+data/raw/geografia/*.dbf
+data/raw/geografia/*.prj
+data/raw/geografia/*.cpg
+data/raw/geografia/*.qmd
+data/raw/geografia/*.xml
+
+# Microdatos ENEMDU: se commitean los ZIPs pequeños; lo extraído NO
+# data/raw/enemdu/microdatos/
+data/raw/enemdu/microdatos_*/
+data/raw/enemdu/*_BDD_*.zip
+!data/raw/enemdu/1_BDD_ENEMDU_2024_II_TRIMESTRE_SPSS.zip
+!data/raw/enemdu/2_BDD_DATOS_ABIERTOS_ENEMDU_2024_II_TRIMESTRE_CSV.zip
+data/raw/homicidios/diccionario_historico.xlsx
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+*.swp

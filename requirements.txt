@@ -1,0 +1,25 @@
+# Análisis de datos
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1          # lectura de archivos Excel de ENEMDU
+requests>=2.31         # descarga de datasets desde portales oficiales
+pyreadstat>=1.2        # lectura de microdatos .sav/.dta (ENEMDU/ANDA)
+
+# Geodatos
+geopandas>=0.14
+shapely>=2.0
+
+# Modelos econométricos
+statsmodels>=0.14
+linearmodels>=5.0      # efectos fijos de panel (el notebook 04 usa statsmodels como fallback)
+
+# Visualización
+matplotlib>=3.7
+seaborn>=0.13
+plotly>=5.18
+
+# Mini-app
+streamlit>=1.32
+
+# Notebooks
+jupyter>=1.0

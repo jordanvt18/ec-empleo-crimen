@@ -52,6 +52,17 @@ ec-empleo-crimen/
 
 3. **No hay "efecto" espurio en el placebo, y la ola precedió a los decretos de 2024.** El event study con un pseudo-tratamiento en 2021-Q1 no muestra respuesta inmediata (placebo plano en t≈0), mientras que el repunte tardío de la ventana placebo coincide con 2023-Q1, el inicio real de la escalada. El event study centrado en 2024-Q1 (decreto 111) confirma que la ola ya estaba en curso antes de los decretos: estos formalizaron la respuesta estatal (figura `reports/figures/fig_placebo_event_study.png`). El contraste externo con el boletín OECO S1-2025 (4 619 homicidios) coincide con el dataset oficial (4 659; Δ≈0,9 %, atribuible a cortes de fecha).
 
+## Evidencia empírica y política pública
+
+Anexo con revisión de literatura académica indexada (Springer, Elsevier, JSTOR, Oxford, Cambridge, NBER/IZA, BID), metodologías robustas de inferencia causal y evaluación de impacto, y recomendaciones accionables para altos funcionarios de gobierno:
+
+📄 **Reporte completo:** [`reports/evidencia_empirica_y_politica_publica.md`](reports/evidencia_empirica_y_politica_publica.md) — 3 capítulos (revisión de literatura, metodologías causales, recomendaciones de política) con ~110 referencias; todos los DOIs verificados contra Crossref (muestra independiente de 62/62 en revisión).
+
+Tres mensajes clave del anexo:
+1. La asociación desempleo/subempleo ↔ homicidios es **débil** en la literatura indexada (robusta para delitos patrimoniales, frágil para homicidios) — coherente con los resultados de este proyecto (r ≤ 0,34; efectos fijos no significativos).
+2. Los picos de homicidios en América Latina se explican por **mercados ilegales, fragmentación de grupos armados y capacidad estatal**, no por el desempleo agregado.
+3. La evidencia de impacto recomienda **policía focalizada** (no «mano dura» generalizada, contraproducente en Centroamérica), evaluar el Bono de Desarrollo Humano y los programas de empleo juvenil con estándares causales, y crear una **unidad de evidencia** en seguridad.
+
 ## Limitaciones
 
 - **Cobertura ENEMDU parcial:** el repositorio inicial incluye microdatos provinciales de un solo trimestre (2024-II); el resto del periodo 2018–2026 requiere descarga (patrones documentados en el notebook 03) o acceso a ANDA. Por eso el panel laboral no permite estimar elasticidades de largo plazo.

@@ -1,0 +1,64 @@
+% ============================================================================
+% Homicides and Labor Market Conditions in Ecuador, 2018-2026:
+% Descriptive and Quasi-Experimental Evidence from a Province-Quarter Panel
+% ----------------------------------------------------------------------------
+% arXiv submission package (econ.EM / econ.GN).
+% Compile: pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+% ============================================================================
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\graphicspath{{figures/}}
+
+\title{\textbf{Homicides and Labor Market Conditions in Ecuador, 2018--2026: \\ Descriptive and Quasi-Experimental Evidence from a Province--Quarter Panel}}
+
+\author{%
+  Claw BT\thanks{Data \& ML Lead. All data are official (INEC, Ministerio del Interior, IGM/CONALI, OECO/PADF); full replication code and data processing at \url{https://github.com/jordanvt18/ec-empleo-crimen}. This is a preprint and has not been peer reviewed. Comments welcome.} \\
+  \small Ecuadorian Provincial Evidence Project}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+\noindent\textbf{Keywords:} intentional homicide; unemployment; underemployment; Ecuador; event study; synthetic control
+\smallskip
+
+\noindent\textbf{JEL codes:} C23, J64, K42
+\medskip
+
+\section{Introduction}
+\input{intro.tex}
+
+\section{Data and descriptive evidence}
+\input{data.tex}
+
+\section{Econometric framework}
+\input{methods.tex}
+
+\section{Results}
+\input{results.tex}
+
+\section{Discussion and policy implications}
+\input{discussion.tex}
+
+\section{Conclusion}
+\input{conclusion.tex}
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

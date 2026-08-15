@@ -1,0 +1,106 @@
+4. Results
+
+
+
+\subsection{Cross-sectional association between labor markets and homicides}
+
+
+
+The raw association between provincial labor conditions and homicides is positive but weak. Across the three labor indicators, Pearson correlations with provincial homicides do not exceed 0.34; the strongest is between underemployment and 2025 homicide rates (r $\approx$ 0.34). The Spearman rank correlation between provincial underemployment and 2025 homicides reaches 0.42. These magnitudes are consistent with the international pattern documented in meta-analytic and cross-country work: positive but modest associations between labor precariousness and violence, driven more by property crime than by homicide (Chiricos, 1987; Fajnzylber et al., 2002a). They are also what a confounded cross-section would look like: Guayas concentrates cocaine transit infrastructure, organized crime presence, and high underemployment simultaneously, so the raw correlation cannot be read causally.
+
+
+
+\subsection{Regression estimates}
+
+\subsection{Regression estimates}
+
+Table~\ref{tab:regresiones} reports the regression results. Because provincial labor indicators exist for a single ENEMDU cross-section (2024-II), the estimable specification is a cross-sectional OLS regression of the log provincial homicide rate on the labor indicators, with regional dummies (Costa, Sierra, Oriente, Gal\'apagos) and standard errors clustered at the province level (N = 24). In this specification the coefficient on the provincial unemployment rate is +0.08 (p $\approx$ 0.39) and the coefficient on the underemployment rate is $-$0.04 (p $\approx$ 0.47); neither is statistically significant, and both are economically negligible relative to a 2025 national rate of approximately 51 per 100,000. Adding adequate employment leaves the picture unchanged, and the prospective specification using 2025 homicide rates delivers even smaller coefficients. In the two-way fixed-effects specification the labor coefficients are not identified, as explained in Section~3.2; this identification limit is itself a finding, because it implies that no claim about the causal effect of provincial labor conditions on homicides can be supported by the currently available ENEMDU data.
+
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption{Association between provincial labor indicators and log homicide rates: cross-sectional OLS with regional dummies and province-clustered standard errors.}
+  \label{tab:regresiones}
+  \begin{tabular}{lcccc}
+    \toprule
+    & Coef. & SE (cluster) & p-value & 95\% CI \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Panel A. Outcome: log(homicide rate 2024 + 1), N = 24}} \\
+    Unemployment rate & +0.081 & 0.095 & 0.394 & [$-$0.105, +0.268] \\
+    Underemployment rate & $-$0.036 & 0.050 & 0.471 & [$-$0.134, +0.062] \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Panel B. Outcome: log(homicide rate 2024 + 1), including adequate employment, N = 24}} \\
+    Unemployment rate & +0.080 & 0.093 & 0.387 & [$-$0.102, +0.262] \\
+    Underemployment rate & $-$0.036 & 0.061 & 0.559 & [$-$0.155, +0.084] \\
+    Adequate employment rate & +0.001 & 0.023 & 0.984 & [$-$0.045, +0.046] \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Panel C. Prospective outcome: log(homicide rate 2025 + 1), N = 24}} \\
+    Unemployment rate & +0.034 & 0.060 & 0.568 & [$-$0.083, +0.152] \\
+    Underemployment rate & $-$0.008 & 0.036 & 0.823 & [$-$0.079, +0.063] \\
+    \bottomrule
+  \end{tabular}
+  \par\vspace{3pt}\noindent\small\textit{Note. }Labor indicators from ENEMDU 2024-II (provincial, time-invariant). All specifications include regional dummies (Costa, Sierra, Oriente, Gal\'apagos). Standard errors clustered at the province level. Computed with statsmodels from the official sources described in Section~2 (authors' calculations).
+  
+\end{table}
+
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.98\textwidth]{fig06_labor_correlations.png}
+  \caption{Provincial labor markets (ENEMDU 2024-II) and 2025 homicide rates: cross-section scatterplots with Pearson and Spearman correlations (N = 24).}
+  \label{fig:correlaciones}
+\end{figure}
+
+
+
+\subsection{Event study: the wave preceded the decrees}
+
+
+
+The event study around 2024Q1 delivers a null result with a clear interpretation. No post-treatment relative-time coefficient is statistically significant: the estimates do not detect a differential change in provincial homicide trajectories after Decreto 111 relative to the common national trajectory. This is not evidence that the decrees were effective or ineffective -- the exceptional regime produced no detectable break in the series, consistent with an escalation already fully under way before the first decree (the national count rose from 2,495 in 2021 to 8,248 in 2023). The placebo design supports the credibility of the machinery: with a pseudo-treatment assigned to 2021Q1, the estimated coefficients are flat at the event time (t $\approx$ 0), and the late upturn observed inside the placebo window coincides with 2023Q1, the actual onset of the escalation. The placebo thus detects the real wave where it occurs in the data and shows no spurious response at the pseudo-event, which is the pattern expected from a correctly specified estimator -- while, per Roth (2022), we refrain from treating the flat placebo as a validation of parallel trends.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig03_event_study_decreto111.png}
+  \caption{Event study around Decreto 111 (2024Q1): dynamic coefficients $\hat{\delta}_k$ with 95\% confidence intervals. No post-treatment coefficient is statistically significant.}
+  \label{fig:event_study}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig04_placebo_2021q1.png}
+  \caption{Placebo event study with pseudo-treatment assigned to 2021Q1: coefficients are flat at the event time; the late upturn coincides with 2023Q1, the actual onset of the escalation.}
+  \label{fig:placebo}
+\end{figure}
+
+
+
+\subsection{Synthetic control: Esmeraldas}
+
+
+
+The synthetic control for Esmeraldas achieves a pre-treatment root mean squared error (RMSE) of 4.78 homicides per 100,000 against its synthetic counterpart built from the other 23 provinces. Over the post-2024 window, Esmeraldas' observed homicide rate lies below its counterfactual by an average of $-$4.87 per 100,000. Against the placebo distribution this gap is illustrative: with 24 units the minimum achievable placebo p-value is approximately 1/24 and small provinces are volatile, so the result is a descriptive case-study datum, not evidence that any post-2024 intervention reduced homicides in Esmeraldas (Abadie et al., 2010, 2015).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig05_synthetic_control_esmeraldas.png}
+  \caption{Synthetic control for Esmeraldas: observed vs.\ synthetic series and post-treatment gap (pre-treatment RMSE 4.78; mean post gap $-$4.87 per 100,000). Donor weights: Ca\~nar 0.48, Los R\'ios 0.34, El Oro 0.17, Guayas 0.01.}
+  \label{fig:scm}
+\end{figure}
+
+
+
+\subsection{Robustness and external validation}
+
+
+
+Two robustness checks reinforce the descriptive findings. First, the national character of the wave survives the exclusion of its epicenter: excluding Guayas, homicides grew 34.7\% in 2025 relative to 2024, so the escalation is not an artifact of one province. Second, the primary source was contrasted with the independent OECO bulletin for S1-2025: 4,619 homicides (OECO) versus 4,659 in the official dataset, a difference of approximately 0.9\% attributable to recording cut-offs. The close agreement increases confidence that the series is not dominated by reporting artifacts, while the residual discrepancy illustrates the need for routine cross-validation of administrative sources (Escaño et al., 2025).
+
+
+
+\subsection{Summary of results}
+
+
+
+In sum: (i) the cross-sectional association between labor precariousness and homicides is weak (r $\leq$ 0.34; $\rho$ = 0.42 for underemployment in 2025); (ii) regression estimates of the labor coefficients are small and statistically insignificant ($\beta$ = +0.08, p $\approx$ 0.39 for unemployment; $\beta$ = $-$0.04, p $\approx$ 0.47 for underemployment); (iii) the event study detects no significant differential change after Decreto 111, and the placebo is flat at the pseudo-event; (iv) the synthetic control for Esmeraldas is suggestive but not conclusive; and (v) the wave is national and precedes the security decrees. None of these results identifies a causal effect; the consistent pattern, however, is that aggregate provincial labor market conditions do not explain the homicide wave, which aligns with the international evidence that homicide spikes in the region are driven by organized crime, illicit markets, and state capacity rather than by unemployment (Dell, 2015; Castillo et al., 2020; Lessing, 2021; Fajnzylber et al., 2002a).

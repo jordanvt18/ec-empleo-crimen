@@ -112,3 +112,17 @@ git clone https://github.com/jordanvt18/ec-empleo-crimen.git
 - Datos: propiedad de sus fuentes oficiales (INEC, Ministerio del Interior, IGM/CONALI); uso académico/de divulgación citando la fuente.
 - Código: uso libre con atribución.
 - Contacto: abrir un issue en el repositorio.
+
+## Paper (preprint)
+
+El manuscrito académico en inglés, listo para arXiv (econ.EM / econ.GN), está en [paper/](paper/):
+
+- main.tex — documento principal (compilar con pdflatex + bibtex)
+- 
+eferences.bib — 64 referencias verificadas contra Crossref (15-ago-2026)
+- igures/ — 6 figuras en inglés generadas desde las fuentes oficiales
+- main.pdf — PDF compilado (20 páginas)
+
+Título: *Homicides and Labor Market Conditions in Ecuador, 2018–2026: Descriptive and Quasi-Experimental Evidence from a Province–Quarter Panel*. JEL: C23, J64, K42.
+
+> Nota: para enviar a arXiv se requiere cuenta de autor y *endorsement* en la categoría econ/stat; el paquete LaTeX está listo tal cual.

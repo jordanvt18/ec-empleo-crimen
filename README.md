@@ -80,13 +80,18 @@ Los notebooks están escritos como `.py` estilo jupytext en `notebook_sources/`;
 
 ## Cómo publicar en GitHub
 
+Este repositorio ya está publicado en:
+
 ```bash
-git init
-git add .
-git commit -m "ec-empleo-crimen: análisis CRISP-DM desempleo/subempleo y homicidios, Ecuador 2018-2026"
+git remote add origin https://github.com/jordanvt18/ec-empleo-crimen.git
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/ec-empleo-crimen.git
 git push -u origin main
+```
+
+Para clonarlo en otra máquina:
+
+```bash
+git clone https://github.com/jordanvt18/ec-empleo-crimen.git
 ```
 
 > El repositorio incluye `.gitignore` para no subir geodatos pesados (>50 MB) ni archivos temporales; los datasets pequeños (homicidios agregados, población, panel) sí se versionan.

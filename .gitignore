@@ -45,8 +45,6 @@ Thumbs.db
 .idea/
 *.swp
 
-# LaTeX auxiliares del paper
-paper/*.aux
 paper/*.log
 paper/*.blg
 paper/*.out
